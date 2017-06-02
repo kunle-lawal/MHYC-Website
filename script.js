@@ -6,6 +6,14 @@ function randNum( min, max ) {
 $(document).ready(function(){
 	$(".slide_header_text").removeClass("slide_header_hidden");
 
+	var scroll_top = $(document).scrollTop();
+	if(scroll_top >= 700){
+		$("#nav_bar").addClass("nav_bar_stick");
+		$(".nav img").addClass("shrink_img");
+	} else {
+		$("#nav_bar").removeClass("nav_bar_stick");
+		$(".nav img").removeClass("shrink_img");
+	}
 
 	//On Click change slide
 	var curr_slide = 1;
